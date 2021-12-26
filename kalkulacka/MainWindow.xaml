@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kalkulacka"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="430" Width="280">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2.5*"/>
@@ -21,30 +21,31 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0"/>
-        <Button Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="2"/>
-        <Button Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="3"/>
+        <TextBox x:Name="Display" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontSize="48" TextAlignment="Right" VerticalAlignment="Bottom">0</TextBox>
 
-        <Button Content="C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="0"/>
-        <Button Content="CE" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="1"/>
-        <Button Content="backspace" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="2"/>
-        <Button Content="button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="3"/>
+        <Button x:Name="C" Content="C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0" FontSize="20" FontFamily="Segoe UI Black" Click="C_Click"/>
+        <Button x:Name="CE" Content="CE" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" FontFamily="Segoe UI Black" FontSize="20" Click="CE_Click" Grid.Row="1"/>
+        <Button x:Name="BS" Content="◄" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="2" FontSize="20" FontWeight="Bold" FontFamily="Arial Black" Click="BS_Click"/>
+        <Button x:Name="Del" Content="/" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="3" FontSize="20" FontFamily="Segoe UI Black" Click="Del_Click"/>
 
-        <Button Content="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="0"/>
-        <Button Content="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="1"/>
-        <Button Content="9" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="2"/>
-        <Button Content="x" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="3"/>
+        <Button x:Name="n7" Content="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="0" FontSize="24" FontFamily="Cascadia Mono SemiBold" Click="n7_Click"/>
+        <Button x:Name="n8" Content="8" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" FontSize="24" FontFamily="Cascadia Mono SemiBold" Height="55" Click="n8_Click"/>
+        <Button x:Name="n9" Content="9" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="2" FontSize="24" FontFamily="Cascadia Mono SemiBold" Click="n9_Click"/>
+        <Button x:Name="Nas" Content="x" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="3" FontFamily="Segoe UI Black" FontSize="20" Click="Nas_Click"/>
 
-        <Button Content="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="4" Grid.Column="0"/>
-        <Button Content="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="4" Grid.Column="1"/>
-        <Button Content="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="4" Grid.Column="2"/>
-        <Button Content="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="4" Grid.Column="3"/>
+        <Button x:Name="n4" Content="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="0" FontSize="24" FontFamily="Cascadia Mono SemiBold" Click="n4_Click"/>
+        <Button x:Name="n5" Content="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="1" FontSize="24" FontFamily="Cascadia Mono SemiBold" Click="n5_Click"/>
+        <Button x:Name="n6" Content="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="2" FontSize="24" FontFamily="Cascadia Mono SemiBold" Click="n6_Click"/>
+        <Button x:Name="Min" Content="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="3" FontSize="20" FontFamily="Segoe UI Black" Click="Min_Click"/>
 
-        <Button Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="0"/>
-        <Button Content="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="1"/>
-        <Button Content="," HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="2"/>
-        <Button Content="=" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="3"/>
+        <Button x:Name="n1" Content="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="4" Grid.Column="0" FontSize="24" FontFamily="Cascadia Mono SemiBold" Click="n1_Click"/>
+        <Button x:Name="n2" Content="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="4" Grid.Column="1" FontSize="24" FontFamily="Cascadia Mono SemiBold" Click="n2_Click"/>
+        <Button x:Name="n3" Content="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="4" Grid.Column="2" FontSize="24" FontFamily="Cascadia Mono SemiBold" Click="n3_Click"/>
+        <Button x:Name="Plus" Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="4" Grid.Column="3" FontSize="20" FontFamily="Segoe UI Black" Click="Plus_Click"/>
+
+        <Button x:Name="Zapor" Content="+/-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="0" FontSize="20" FontFamily="Segoe UI Black" Click="Zapor_Click"/>
+        <Button x:Name="n0" Content="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="1" FontFamily="Cascadia Mono SemiBold" FontSize="24" Click="n0_Click"/>
+        <Button x:Name="Rovno" Content="=" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="3" FontSize="20" FontFamily="Segoe UI Black" Click="Rovno_Click"/>
 
 
     </Grid>
